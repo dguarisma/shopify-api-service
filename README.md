@@ -1,6 +1,18 @@
 # shopify-api-service
 
-Primero installar las dependecias
+## Serverless para Actualización de Inventario y Órdenes en Shopify
+Este proyecto utiliza arquitectura serverless para actualizar el inventario y gestionar órdenes en una tienda Shopify. La implementación se realiza utilizando servicios en la nube, lo que permite una escalabilidad eficiente y un manejo simplificado de la infraestructura.
+
+#### Funcionalidades Principales
+El sistema proporciona las siguientes funcionalidades principales:
+
+Actualización de Inventario: Utiliza eventos de cambio de inventario para mantener actualizados los niveles de stock en la tienda Shopify.
+
+Gestión de Órdenes: Procesa las órdenes entrantes de manera automatizada, actualizando el estado de las órdenes en la tienda Shopify y realizando acciones adicionales según sea necesario.
+
+
+
+# Primero installar las dependecias
 ```go
 $ go mod tidy
 ```
