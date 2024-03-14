@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  mysql:
+    container_name: mysql-test
+    image: mysql:5.6.51
+    ports:
+      - $DB_PORT_LOCAL:$DB_PORT_DOCKER
+    env_file: .env
+    environment:
+      MYSQL_DATABASE: $DB_TABLE
+      MYSQL_ROOT_PASSWORD: $DB_PASSWORD
+    volumes:
+      - ./databases:/var/lib/mysql:rw
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+        - 8080:8080

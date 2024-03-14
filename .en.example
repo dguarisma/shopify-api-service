@@ -1,0 +1,28 @@
+# db-format = user:password(host:port)/db?parseTime=true
+
+#-farmu-database---------------------------------------------------------------
+DB_URI=
+
+#-Shopify-database-------------------------------------------------------------
+DB_SHOPIFY=
+
+
+#-aws-ses----------------------------------------------------------------------
+# sistema de mensajeria de amazon
+HOST=
+AWS_SES_ACCESS_KEY=
+AWS_SES_SECRET_KEY=
+EMAIL=
+
+#-Warehouses(shopify)----------------------------------------------------------
+# formato Name,Url,XshopifyAccessToken
+BARRANQULLA=
+BOGOTA=
+
+#-mysql-docker-development-----------------------------------------------------
+DB_TEST=
+
+DB_PORT_DOCKER=
+DB_PORT_LOCAL=
+DB_TABLE=
+DB_PASSWORD=

@@ -1,0 +1,2059 @@
+{
+	"info": {
+		"_postman_id": "47509b83-80da-4cea-80ac-0e2b0bf68d99",
+		"name": "farmu product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{product}}?limit=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{product}}?limit=10+20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10+20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{product}}?ID=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{product}}?Name=Name",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": "Name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":213}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{product}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": \"1\",\n  \"PackID\": \"1\",\n  \"MakerID\": \"1\",\n  \"TrademarkID\": \"149\",\n  \"TypesProductID\": \"1\",\n  \"CategoryOneID\": \"6\",\n  \"CategoryTwoID\": \"2\",\n  \"CategoryThreeID\": \"3\",\n  \"WarehouseIDS\": \"17\",\n  \"SubstitutesIDS\": \"88\",\n  \"SubstancesIDS\": \"6\",\n  \"Name\": \"mama\",\n  \"SKU\": \"a1\",\n  \"Ean\": \"a1\",\n  \"Iva\": \"111\",\n  \"Img\": \"\",\n  \"Quantity\": \"\",\n  \"Weight\": \"\",\n  \"Width\": \"\",\n  \"Height\": \"\",\n  \"Pack\": \"\",\n  \"PackUnit\": \"\",\n  \"Depth\": \"\",\n  \"Keywords\": \"\",\n  \"MakerUnit\": \"\",\n  \"Variation\": \"\",\n  \"Wrapper\": \"\",\n  \"WrapperUnit\": \"\",\n  \"HandlesBog\": \"asdsas\",\n  \"HandlesBaq\": \"asdas\",\n  \"Status\": false,\n  \"IsTaxed\": false,\n  \"Tax\": \"\"\n}\n\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{product}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": \"\",\n  \"PackID\": \"13\",\n  \"MakerID\": \"33\",\n  \"TrademarkID\": \"149\",\n  \"TypesProductID\": \"213\",\n  \"CategoryOneID\": \"6\",\n  \"CategoryTwoID\": \"2\",\n  \"CategoryThreeID\": \"3\",\n  \"WarehouseIDS\": \"17, 27, 26\",\n  \"SubstitutesIDS\": \"88, 89\",\n  \"SubstancesIDS\": \"6, 7\",\n  \"Name\": \"mama\",\n  \"SKU\": \"a1aa\",\n  \"Ean\": \"a1aa\",\n  \"Iva\": \"111\",\n  \"Img\": \"\",\n  \"Quantity\": \"\",\n  \"Weight\": \"\",\n  \"Width\": \"\",\n  \"Height\": \"\",\n  \"Pack\": \"\",\n  \"PackUnit\": \"\",\n  \"Depth\": \"\",\n  \"Keywords\": \"\",\n  \"MakerUnit\": \"\",\n  \"Variation\": \"\",\n  \"Wrapper\": \"\",\n  \"WrapperUnit\": \"\",\n  \"HandlesBog\": \"\",\n  \"HandlesBaq\": \"\",\n  \"Status\": false,\n  \"IsTaxed\": false,\n  \"Tax\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{product}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne empty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": \"212\",\n  \"Name\": \"mama\",\n  \"SKU\": \"a1a1\",\n  \"Ean\": \"a1a1\",\n  \"WarehouseIDS\":\"39\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{product}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": \"\",\n    \"Name\": \"Name\",\n    \"Sku\": \"Skuasdaa12\",\n    \"Ean\": \"Eandasaa12\",\n    \"Taxed\": true,\n    \"iva\": \"21\",\n    \"UrlImage\": \"Aca va una imagen\",\n    \"PackID\": null,\n    \"PackInfo\": \"Esto es un pack\",\n    \"Quantity\": \"1\",\n    \"MakerUnit\": \"2\",\n    \"Weight\": \"3\",\n    \"Height\": \"4\",\n    \"Width\": \"5\",\n    \"PackUnit\": \"6\",\n    \"Depth\": \"7\",\n    \"Keywords\": \"Keywords\",\n    \"Variation\": \"13\",\n    \"Wrapper\": \"Wrapper\",\n    \"WrapperUnit\": \"WrapperUnit\",\n    \"Status\": true,\n    \"HandlesBog\": \"HandlesBog\",\n    \"HandlesBaq\": \"HandlesBaq\",\n    \"MakerID\": null,\n    \"TrademarkID\": null,\n    \"CategoryOneID\": null,\n    \"CategoryTwoID\": \"2\",\n    \"CategoryThreeID\": \"3\",\n    \"TypesProductID\": null\n  },{\n    \n    \"ID\": \"\",\n    \"Name\": \"Name\",\n    \"Sku\": \"Skuaa1asdasd2\",\n    \"Ean\": \"Eansadaaa12\",\n    \"Taxed\": true,\n    \"iva\": \"21\",\n    \"UrlImage\": \"Aca va una imagen\",\n    \"PackID\": null,\n    \"PackInfo\": \"Esto es un pack\",\n    \"Quantity\": \"1\",\n    \"MakerUnit\": \"2\",\n    \"Weight\": \"3\",\n    \"Height\": \"4\",\n    \"Width\": \"5\",\n    \"PackUnit\": \"6\",\n    \"Depth\": \"7\",\n    \"Keywords\": \"Keywords\",\n    \"Variation\": \"13\",\n    \"Wrapper\": \"Wrapper\",\n    \"WrapperUnit\": \"WrapperUnit\",\n    \"Status\": true,\n    \"HandlesBog\": \"HandlesBog\",\n    \"HandlesBaq\": \"HandlesBaq\",\n    \"MakerID\": null,\n    \"TrademarkID\": null,\n    \"CategoryOneID\": null,\n    \"CategoryTwoID\": \"2\",\n    \"CategoryThreeID\": \"3\",\n    \"TypesProductID\": null\n  }\n  \n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{product}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{product}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "supplier",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{supplier}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{supplier}}?ID=122",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "122"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{supplier}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": 27,\n    \"BusinessName\": \"Prueba\",\n    \"DaysPayment\": \"2\",\n    \"Nit\": \"32189987665\",\n    \"PaymenTerm\": \"Pago inmediato 30\",\n    \"Cupo\": 4444444,\n    \"Discount\": 12,\n    \"LeadTimeBaq\": 12,\n    \"LeadTimeBog\": 1,\n    \"NameContact\": \"3333333\",\n    \"EmailContact\": \"s@hotmail.com\",\n    \"PhoneContact\": \"3333333333\",\n    \"Status\": true,\n    \"Location\": \"\",\n    \"Purchases\": null\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{supplier}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 0,\n  \"BusinessName\": \"dasda\",\n  \"Cupo\": 0,\n  \"DaysPayment\": \"\",\n  \"Discount\": 0,\n  \"EmailContact\": \"sdasdas\",\n  \"LeadTimeBaq\": 0,\n  \"LeadTimeBog\": 0,\n  \"NameContact\": \"aaaaaa\",\n  \"Nit\": \"asdasdasd\",\n  \"PaymenTerm\": \"\",\n  \"PhoneContact\": \"asdasdasda\",\n  \"Status\": false,\n  \"Location\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{supplier}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 0,\n    \"BusinessName\": \"dasda\",\n    \"Cupo\": 0,\n    \"DaysPayment\": \"\",\n    \"Discount\": 0,\n    \"EmailContact\": \"sdasdas\",\n    \"LeadTimeBaq\": 0,\n    \"LeadTimeBog\": 0,\n    \"NameContact\": \"aaaaaa\",\n    \"Nit\": \"asdasdasd\",\n    \"PaymenTerm\": \"\",\n    \"PhoneContact\": \"asdasdasda\",\n    \"Status\": false,\n    \"Location\": \"\"\n  },\n  {\n    \"ID\": 0,\n    \"BusinessName\": \"dasda\",\n    \"Cupo\": 0,\n    \"DaysPayment\": \"\",\n    \"Discount\": 0,\n    \"EmailContact\": \"sdasdas\",\n    \"LeadTimeBaq\": 0,\n    \"LeadTimeBog\": 0,\n    \"NameContact\": \"aaaaaa\",\n    \"Nit\": \"asdasdasd\",\n    \"PaymenTerm\": \"\",\n    \"PhoneContact\": \"asdasdasda\",\n    \"Status\": false,\n    \"Location\": \"\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{supplier}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{supplier}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trademark",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{trademark}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{trademark}}?ID=852",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "852"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{trademark}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 154,\n  \"MakerID\": 183,\n  \"Name\": \"TESTE\",\n  \"Status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{trademark}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 0,\n  \"MakerID\": 220,\n  \"Name\": \"example cambiado\",\n  \"Status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{trademark}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 154,\n    \"MakerID\": 183,\n    \"Name\": \"TESTE\",\n    \"Status\": true\n  },\n  {\n    \"ID\": 157,\n    \"MakerID\": 223,\n    \"Name\": \"Tradmark LaProf cambiado\",\n    \"Status\": false\n  },\n  {\n    \"ID\": 158,\n    \"MakerID\": 220,\n    \"Name\": \"example cambiado\",\n    \"Status\": true\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{trademark}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{trademark}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "maker",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{maker}}?ID=183",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "183"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":1029}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 183,\n  \"Name\": \"ROPSOHN THERAPEUTICS\",\n  \"Status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 0,\n  \"Name\": \"ROPSOHN THERAPEUTICS\",\n  \"Status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 183,\n    \"Name\": \"ROPSOHN THERAPEUTICS\",\n    \"Status\": false\n  },\n  {\n    \"ID\": 220,\n    \"Name\": \"hola teste\",\n    \"Status\": true\n  },\n  {\n    \"ID\": 221,\n    \"Name\": \"teste\",\n    \"Status\": false,\n    \"Trademarks\": []\n  },\n  {\n    \"Name\": \"TEste\",\n    \"Status\": true,\n    \"Trademarks\": []\n  },\n  {\n    \"ID\": 0,\n    \"Name\": \"TEste\",\n    \"Status\": true,\n    \"Trademarks\": []\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany bad import",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"Name\": \"ROPSOHN THERAPEUTICS\",\n    \"ID\": 183,\n    \"Status\": false\n  },\n  {\n    \"Name\": \"hola teste\",\n    \"ID\": 220,\n    \"Status\": false\n  },\n  {\n    \"Name\": \"teste\",\n    \"ID\": 221,\n    \"Status\": false\n  },\n  {\n    \"Name\": \"TEste\",\n    \"ID\": 222,\n    \"Status\": false\n  },\n  {\n    \"Name\": \"TEste\",\n    \"ID\": \"\",\n    \"Status\": true\n  },\n  {\n    \"Name\": \"TEste\",\n    \"ID\": \"\",\n    \"Status\": true\n  },\n  {\n    \"Name\": \"TEste\",\n    \"ID\": \"\",\n    \"Status\": true\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{maker}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{maker}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pack",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{pack}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{pack}}?ID=25",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":7}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{pack}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 15,\n  \"Name\": \"Envase\",\n  \"Status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{pack}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 0,\n  \"Name\": \"ROPSOHN THERAPEUTICS\",\n  \"Status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{pack}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 186,\n    \"Name\": \"example\",\n    \"Status\": true\n  },\n  {\n    \"ID\": 0,\n    \"Name\": \"example2\",\n    \"Status\": true\n  },\n    {\n    \"Name\": \"exampl3e\",\n    \"Status\": true\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{pack}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{pack}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "typeproduct",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}?ID=27",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "27"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":258}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 265,\n  \"Name\": \"DROGAM\",\n  \"Status\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"Productosa\",\n  \"Status\": false,\n  \"Products\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 399,\n    \"Name\": \"example\",\n    \"Status\": true\n  },\n  {\n    \"ID\": 0,\n    \"Name\": \"example2\",\n    \"Status\": true\n  },\n    {\n    \"Name\": \"exampl3e\",\n    \"Status\": true\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{typeproduct}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{typeproduct}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "purchase",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{purchase}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{purchase}}?ID=26",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "26"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":82}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{purchase}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"ID\": 186,\n  \"SupplierID\": 26,\n  \"WarehouseID\": 49,\n  \"Notes\": \"producto\",\n  \"Discount\": 10,\n  \"DiscountEarliyPay\": 5,\n  \"DiscountGlobal\": 9000,\n  \"SubtotalWithDiscount\": 81000,\n  \"SubTotal\": 90000,\n  \"Total\": 86000,\n  \"Tax\": 5000,\n  \"Status\": 1,\n  \"InvoiceNumber\": 0,\n  \"ReceptionStatus\": 0,\n  \"DateExpireInvoice\": \"2022-11-11T16:13:23.549Z\",\n  \"CreatedAt\": \"2022-11-11T16:13:23.549Z\",\n  \"Articles\": [\n    {\n\n      \"PurchaseID\": 185,\n      \"ProductID\": 267,\n      \"Count\": 100,\n      \"BasePrice\": 1000,\n      \"Tax\": 5,\n      \"Discount\": 10,\n      \"DiscountAdditional\": 10,\n      \"Bonus\": 1,\n      \"SubTotal\": 90000,\n      \"Total\": 95000,\n      \"ReceptionInfo\": null\n    },\n    {\n\n      \"PurchaseID\": 185,\n      \"ProductID\": 267,\n      \"Count\": 1,\n      \"BasePrice\": 0,\n      \"Tax\": 0,\n      \"Discount\": 0,\n      \"DiscountAdditional\": 0,\n      \"Bonus\": 0,\n      \"SubTotal\": 0,\n      \"Total\": 0,\n      \"ReceptionInfo\": null\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{purchase}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"SupplierID\": 26,\n  \"WarehouseID\": 49,\n  \"Notes\": \"producto\",\n  \"Discount\": 10,\n  \"DiscountEarliyPay\": 5,\n  \"DiscountGlobal\": 9000,\n  \"SubtotalWithDiscount\": 81000,\n  \"SubTotal\": 90000,\n  \"Total\": 86000,\n  \"Tax\": 5000,\n  \"Status\": 1,\n  \"InvoiceNumber\": 0,\n  \"ReceptionStatus\": 0,\n  \"DateExpireInvoice\": null,\n  \"CreatedAt\": \"2022-11-11T16:13:23.549Z\",\n  \"Articles\": [\n    {\n      \"PurchaseID\": 185,\n      \"ProductID\": 267,\n      \"Count\": 100,\n      \"BasePrice\": 1000,\n      \"Tax\": 5,\n      \"Discount\": 10,\n      \"DiscountAdditional\": 10,\n      \"Bonus\": 1,\n      \"SubTotal\": 90000,\n      \"Total\": 95000,\n      \"ReceptionInfo\": null\n    },\n    {\n      \"PurchaseID\": 185,\n      \"ProductID\": 267,\n      \"Count\": 1,\n      \"BasePrice\": 0,\n      \"Tax\": 0,\n      \"Discount\": 0,\n      \"DiscountAdditional\": 0,\n      \"Bonus\": 0,\n      \"SubTotal\": 0,\n      \"Total\": 0,\n      \"ReceptionInfo\": null\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{purchase}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"SupplierID\": 26,\n    \"WarehouseID\": 49,\n    \"Notes\": \"producto\",\n    \"Discount\": 10,\n    \"DiscountEarliyPay\": 5,\n    \"DiscountGlobal\": 9000,\n    \"SubtotalWithDiscount\": 81000,\n    \"SubTotal\": 90000,\n    \"Total\": 86000,\n    \"Tax\": 5000,\n    \"Status\": 1,\n    \"InvoiceNumber\": 0,\n    \"ReceptionStatus\": 0,\n    \"DateExpireInvoice\": null,\n    \"CreatedAt\": \"2022-11-11T16:13:23.549Z\",\n    \"Articles\": [\n      {\n        \"PurchaseID\": 185,\n        \"ProductID\": 267,\n        \"Count\": 100,\n        \"BasePrice\": 1000,\n        \"Tax\": 5,\n        \"Discount\": 10,\n        \"DiscountAdditional\": 10,\n        \"Bonus\": 1,\n        \"SubTotal\": 90000,\n        \"Total\": 95000,\n        \"ReceptionInfo\": null\n      },\n      {\n        \"PurchaseID\": 185,\n        \"ProductID\": 267,\n        \"Count\": 1,\n        \"BasePrice\": 0,\n        \"Tax\": 0,\n        \"Discount\": 0,\n        \"DiscountAdditional\": 0,\n        \"Bonus\": 0,\n        \"SubTotal\": 0,\n        \"Total\": 0,\n        \"ReceptionInfo\": null\n      }\n    ]\n  },\n  {\n    \"SupplierID\": 26,\n    \"WarehouseID\": 49,\n    \"Notes\": \"producto\",\n    \"Discount\": 10,\n    \"DiscountEarliyPay\": 5,\n    \"DiscountGlobal\": 9000,\n    \"SubtotalWithDiscount\": 81000,\n    \"SubTotal\": 90000,\n    \"Total\": 86000,\n    \"Tax\": 5000,\n    \"Status\": 1,\n    \"InvoiceNumber\": 0,\n    \"ReceptionStatus\": 0,\n    \"DateExpireInvoice\": null,\n    \"CreatedAt\": \"2022-11-11T16:13:23.549Z\",\n    \"Articles\": [\n      {\n        \"PurchaseID\": 185,\n        \"ProductID\": 267,\n        \"Count\": 100,\n        \"BasePrice\": 1000,\n        \"Tax\": 5,\n        \"Discount\": 10,\n        \"DiscountAdditional\": 10,\n        \"Bonus\": 1,\n        \"SubTotal\": 90000,\n        \"Total\": 95000,\n        \"ReceptionInfo\": null\n      },\n      {\n        \"PurchaseID\": 185,\n        \"ProductID\": 267,\n        \"Count\": 1,\n        \"BasePrice\": 0,\n        \"Tax\": 0,\n        \"Discount\": 0,\n        \"DiscountAdditional\": 0,\n        \"Bonus\": 0,\n        \"SubTotal\": 0,\n        \"Total\": 0,\n        \"ReceptionInfo\": null\n      }\n    ]\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{purchase}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{purchase}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "```\nPara crear o actulizar debe tener los campos \"SupplierID\", \"WarehouseID\".\nY todos los productos deben tener un id.\n\n```"
+		},
+		{
+			"name": "substance",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{subtance}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{subtance}}?ID=29",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "29"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":258}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{subtance}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 9,\n  \"Name\": \"teste 2\",\n  \"Status\": true,\n  \"Products\": [202]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{subtance}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"testeeee\",\n  \"Status\": false,\n  \"Products\": [\n    202\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{subtance}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 9,\n    \"ProductID\": null,\n    \"Name\": \"teste 2\",\n    \"Status\": true,\n    \"Products\": null\n  },\n  {\n    \"ID\": 10,\n    \"ProductID\": null,\n    \"Name\": \"testeeee\",\n    \"Status\": false,\n    \"Products\": null\n  },\n  {\n    \"ID\": 11,\n    \"ProductID\": null,\n    \"Name\": \"example\",\n    \"Status\": true,\n    \"Products\": null\n  },\n  {\n    \"ID\": 12,\n    \"ProductID\": null,\n    \"Name\": \"teste 2\",\n    \"Status\": true,\n    \"Products\": null\n  },\n  {\n    \"ID\": 13,\n    \"ProductID\": null,\n    \"Name\": \"testeeee\",\n    \"Status\": false,\n    \"Products\": null\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{subtance}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{subtance}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "one",
+					"item": [
+						{
+							"name": "getAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categoryone}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categoryone}}?ID=13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									],
+									"query": [
+										{
+											"key": "ID",
+											"value": "13"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteByID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ID\":13}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categoryone}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": 14,\n  \"Name\": \"TESte grupo\",\n  \"Status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categoryone}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createOne",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"example\",\n  \"Status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categoryone}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createMany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"ID\": 13,\n    \"Name\": \"Grupo Nuevo23\",\n    \"Status\": false\n  },\n  {\n    \"ID\": 14,\n    \"Name\": \"TESte grupo\",\n    \"Status\": false\n  },\n  {\n    \"Name\": \"teste22222\",\n    \"Status\": true\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categoryone}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categoryone}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "two",
+					"item": [
+						{
+							"name": "getAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}?ID=8",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									],
+									"query": [
+										{
+											"key": "ID",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteByID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ID\":7}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": 15,\n  \"Name\": \"teste22222\",\n  \"Status\": false,\n  \"CategoryOneID\": 13\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createOne",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"Name\": \"rwaASasa\",\n  \"Status\": true,\n  \"CategoryOneID\": 13\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createMany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"ID\": 3,\n    \"Name\": \"Categoría2Nueva\",\n    \"Status\": true,\n    \"CategoryOneID\": 14\n  },\n  {\n    \"ID\": 8,\n    \"Name\": \"rwaASasa\",\n    \"Status\": true,\n    \"CategoryOneID\": 14\n  },\n  {\n    \"Name\": \"tecito\",\n    \"Status\": true,\n    \"CategoryOneID\": 0\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorytwo}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorytwo}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "three",
+					"item": [
+						{
+							"name": "getAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categorythree}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorythree}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{categorythree}}?ID=8",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorythree}}"
+									],
+									"query": [
+										{
+											"key": "ID",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteByID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ID\":11}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorythree}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorythree}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": 10,\n  \"Name\": \"TESTE\",\n  \"Status\": true,\n  \"CategoryOneID\": 13,\n  \"CategoryTwoID\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorythree}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorythree}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createOne",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n    \"Name\": \"Dolor general\",\n    \"Status\": true,\n    \"CategoryOneID\": 13,\n    \"CategoryTwoID\": 8\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{categorythree}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{categorythree}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createMany",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n{\n    \"ID\": 86,\n    \"Name\": \"Dolor fuerte\",\n    \"Status\": true,\n    \"CategoryOneID\": 13,\n    \"CategoryTwoID\": 8\n  },\n  {\n    \"ID\": 87,\n    \"Name\": \"Dolor abdominal\",\n    \"Status\": true,\n    \"CategoryOneID\": 13,\n    \"CategoryTwoID\": 8\n  },\n  {\n\n    \"Name\": \"Muscular, articular y varices\",\n    \"Status\": true,\n    \"CategoryOneID\": 13,\n    \"CategoryTwoID\": 8\n  }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/categorias/three",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"categorias",
+										"three"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "warehouse",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{warehouse}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{warehouse}}?ID=21",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							],
+							"query": [
+								{
+									"key": "ID",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":82}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{warehouse}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ID\": 32,\n  \"Name\": \"Baq 2\",\n  \"Department\": \"Atlántico2\",\n  \"City\": \"Barranquilla2\",\n  \"Location\": \"Baq a1 \",\n  \"Status\": false,\n  \"Products\": null,\n  \"Purchase\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{warehouse}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"teste\",\n  \"Department\": \"Casanare\",\n  \"City\": \"Pore\",\n  \"Location\": \"teste\",\n  \"Status\": false,\n  \"Products\": null,\n  \"Purchase\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{warehouse}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 31,\n    \"Name\": \"Bog 1\",\n    \"Department\": \"Cundinamarca\",\n    \"City\": \"Bogotá\",\n    \"Location\": \"Engativa\",\n    \"Status\": true,\n    \"Products\": null,\n    \"Purchase\": null\n  },\n  {\n    \"ID\": 32,\n    \"Name\": \"Baq 2\",\n    \"Department\": \"Atlántico2\",\n    \"City\": \"Barranquilla2\",\n    \"Location\": \"Baq a1 \",\n    \"Status\": false,\n    \"Products\": null,\n    \"Purchase\": null\n  },\n  {\n   \n    \"Name\": \"new\",\n    \"Department\": \"Casanare\",\n    \"City\": \"Pore\",\n    \"Location\": \"teste\",\n    \"Status\": false,\n    \"Products\": null,\n    \"Purchase\": null\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{warehouse}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{warehouse}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "```\nPara crear o actulizar debe tener los campos \"SupplierID\", \"WarehouseID\".\nY todos los productos deben tener un id.\n\n```"
+		},
+		{
+			"name": "recepcion",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{reception}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByArticleId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/{{reception}}?ArticleID=90",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							],
+							"query": [
+								{
+									"key": "ArticleID",
+									"value": "90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ID\": 1,\n    \"ArticleID\": 354,\n    \"Missing\": 2,\n    \"Refund\": 3,\n    \"Reason\": 4,\n    \"Count\": 5,\n    \"Batch\": \"1\",\n    \"Date\": \"2022-11-14T17:29:37.281Z\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{reception}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ID\":18}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{reception}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ArticleID\": 5,\n  \"Missing\": 2,\n  \"Refund\": 3,\n  \"Reason\": 4,\n  \"Count\": 5,\n  \"Batch\": \"1\",\n  \"Date\": \"2022-11-14T17:29:37.281Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{reception}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"ID\": 1,\n    \"ArticleID\": 5,\n    \"Missing\": 2,\n    \"Refund\": 3,\n    \"Reason\": 4,\n    \"Count\": 5,\n    \"Batch\": \"1\",\n    \"Date\": \"2022-11-14T17:29:37.281Z\"\n  },  {\n    \"ArticleID\": 5,\n    \"Missing\": 2,\n    \"Refund\": 3,\n    \"Reason\": 4,\n    \"Count\": 5,\n    \"Batch\": \"1\",\n    \"Date\": \"2022-11-14T17:29:37.281Z\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/{{reception}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{reception}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "```\nPara crear o actulizar debe tener los campos \"SupplierID\", \"WarehouseID\".\nY todos los productos deben tener un id.\n\n```"
+		}
+	]
+}

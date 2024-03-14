@@ -1,0 +1,7 @@
+query {
+  product(id:"gid://shopify/Product/{{.ProductShopifyID}}") {
+    variants(first: 1) { edges { node {
+      inventoryItem { id }
+    }}}
+  }
+}
